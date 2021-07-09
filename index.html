@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="http://cdn.rawgit.com/h2non/jsHashes/master/hashes.js"></script>
+
+    <title>슈슉 해시</title>
+</head>
+<body>
+    <div
+        class="github-logo"
+    >
+        <a href="">
+            <img
+                src="GitHub-Mark-64px.png" 
+                alt="Github Logo"
+            >
+        </a>
+    </div>
+    <div id="app">
+        <div class="container">
+            <h1 class="title">슈슉 해시 발럼아</h1>
+            <div>
+                <p>슈슉 해시는 평문을 슈슉 시발럼아 밈의 텍스트로 해시화 하는 툴입니다.</p>
+            </div>
+            <div class="input-wrap">
+                <label for="plain-textarea">
+                    <h3>
+                        해시화 하고 싶은 평문 입력
+                    </h3>
+                </label>
+                <textarea 
+                    id="plain-textarea"
+                    rows="20"
+                    v-model="plainText"
+                ></textarea>
+            </div>
+            <i class="arrow">
+                ↓
+            </i>
+            <div class="input-wrap">
+                <label for="syusuk-hash-text-area">
+                    <h3>
+                        슈슉 해시화 결과
+                    </h3>
+                </label>
+                <textarea 
+                    id="syusuk-hash-text-area" 
+                    rows="20"
+                    readonly
+                >{{hashedPlainText}}</textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
